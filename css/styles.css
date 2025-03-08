@@ -231,10 +231,15 @@ img {
 /* #region ingredients */
 
 .ingredients-section {
-    padding: 100px 0 50px;
+    margin: 100px 0 100px;
+
 }
 
-.ingredients-container {}
+.ingredients-container {
+    background-color: white;
+    padding: 0;
+    max-width: 1136px;
+}
 
 .ingredients-title {
     font-weight: 600;
@@ -299,9 +304,7 @@ img {
 /* #endregion */
 /* #region made */
 
-.made-section {
-    padding: 50px 0;
-}
+.made-section {}
 
 .made-title {
     font-weight: 600;
@@ -317,13 +320,21 @@ img {
 
 .made-container {
     display: flex;
-    gap: 52px;
+    flex-direction: column;
+    background-color: white;
+    padding: 0;
+    max-width: 1136px;
+}
+
+.made-common {
+    display: flex;
+    gap: 20px;
 }
 
 .made-title-list {
     display: flex;
     flex-direction: column;
-    padding: 32px 0;
+    padding: 32px;
 }
 
 .made-list {
@@ -383,12 +394,21 @@ img {
     flex-direction: column;
     align-items: center;
     width: calc((100% - 2 * 28px) / 3);
+    height: 200px;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
 }
 
+.review-photo {
+    position: absolute;
+    top: -40px;
+}
 
 .reviev-item-text {
     border: 1px solid rgba(17, 17, 17, 0.1);
     border-radius: 15px;
+    height: 200px;
 
 }
 
@@ -444,6 +464,7 @@ img {
 
 .footer-container {
     padding: 50px 32px 86px;
+    position: relative;
 }
 
 .footer-contacts {
@@ -488,6 +509,17 @@ img {
     {
     color: #fd9222;
 }
+
+.footer-contacts::after {
+    content: "";
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 1136px;
+    height: 0px;
+    position: absolute;
+    top: 172px;
+}
+
+.footer-nav {}
 
 .footer-list {
     display: flex;
